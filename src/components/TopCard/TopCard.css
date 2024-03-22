@@ -1,0 +1,24 @@
+/* .instagram-border-gradient {
+    border-top: 4px;
+    background-image: linear-gradient(to right, #fdc468, #df4996);
+    -webkit-background-clip: text;  
+    background-clip: text; 
+  } */
+
+  .instagram-border-gradient {
+    position: relative;
+    width: 15rem;
+  }
+
+  .instagram-border-gradient::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 1px;
+    right: 1px;
+    bottom: 4px;
+    z-index: -1;
+
+    background-image: linear-gradient(to right, #fdc468, #df4996);
+    border-radius: inherit;
+  }

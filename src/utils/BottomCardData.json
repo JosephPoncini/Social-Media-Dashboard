@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Page Views",
+      "number": "87",
+      "socialMedia": "Facebook",
+      "change": "3%",
+      "isUp": true
+    },
+    {
+      "name": "Likes",
+      "number": "52",
+      "socialMedia": "Facebook",
+      "change": "2%",
+      "isUp": false
+    },
+    {
+      "name": "Likes",
+      "number": "5462",
+      "socialMedia": "Instagram",
+      "change": "2257%",
+      "isUp": true
+    },
+    {
+      "name": "Profile Views",
+      "number": "52k",
+      "socialMedia": "Instagram",
+      "change": "1375%",
+      "isUp": true
+    },
+    {
+      "name": "Retweets",
+      "number": "117",
+      "socialMedia": "Twitter",
+      "change": "303%",
+      "isUp": true
+    },
+    {
+      "name": "Likes",
+      "number": "507",
+      "socialMedia": "Twitter",
+      "change": "553%",
+      "isUp": true
+    },
+    {
+      "name": "Likes",
+      "number": "107",
+      "socialMedia": "Youtube",
+      "change": "19%",
+      "isUp": false
+    },
+    {
+      "name": "Total Views",
+      "number": "1407",
+      "socialMedia": "Youtube",
+      "change": "12%",
+      "isUp": false
+    }
+  ]
+  
