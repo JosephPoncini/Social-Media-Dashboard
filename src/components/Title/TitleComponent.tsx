@@ -9,9 +9,9 @@ const TitleComponent = (props:TitleComponentProps) => {
         <h1 className='font-InterBold text-[2em] text-VeryDarkBlueText dark:text-WhiteText'>Social Media Dashboard</h1>
         <h4 className='font-InterBold text-DarkGrayishBlueText dark:text-DesaturatedBlueText'>Total Followers: 23,004</h4>
       </div>
-      <div className='flex flex-row'>
-      <div className='font-InterBold text-DarkGrayishBlueText dark:text-DesaturatedBlueText mr-4'>Dark Mode</div>
-      <div className='h-fit' style={{ transform: 'rotate(180deg)' }}>
+      <div className='flex flex-row h-fit'>
+      <div className='font-InterBold text-DarkGrayishBlueText dark:text-DesaturatedBlueText dark:hover:text-WhiteText mr-4'>Dark Mode</div>
+      <div className='h-fit rotate-180'>
         <DarkLightSwitchComponent clickHandle={props.clickHandle} />        
       </div>        
       </div>
