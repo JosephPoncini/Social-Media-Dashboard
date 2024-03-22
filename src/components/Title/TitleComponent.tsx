@@ -1,18 +1,21 @@
 import React from 'react'
 import DarkLightSwitchComponent from './DarkLightSwitch/DarkLightSwitchComponent'
+import { TitleComponentProps } from '../../interfaces/interfaces'
 
-const TitleComponent = () => {
+const TitleComponent = (props:TitleComponentProps) => {
   return (
     <div className='flex justify-between my-10'>
-      <div className='flex flex-col items-start dark:text-white  '>
-        <h1 className='font-InterBold text-[2em] text-VeryDarkBlueText'>Social Media Dashboard</h1>
-        <h4 className='font-InterBold text-DarkGrayishBlueText'>Total Followers: 23,004</h4>
+      <div className='flex flex-col items-start'>
+        <h1 className='font-InterBold text-[2em] text-VeryDarkBlueText dark:text-WhiteText'>Social Media Dashboard</h1>
+        <h4 className='font-InterBold text-DarkGrayishBlueText dark:text-DesaturatedBlueText'>Total Followers: 23,004</h4>
       </div>
-      {/* <label className="switch">
-        <input type="checkbox" />
-        <span className="slider round"></span>
-      </label> */}
-      <DarkLightSwitchComponent/>
+      <div className='flex flex-row'>
+      <div className='font-InterBold text-DarkGrayishBlueText dark:text-DesaturatedBlueText mr-4'>Dark Mode</div>
+      <div className='h-fit' style={{ transform: 'rotate(180deg)' }}>
+        <DarkLightSwitchComponent clickHandle={props.clickHandle} />        
+      </div>        
+      </div>
+
     </div>
   )
 }

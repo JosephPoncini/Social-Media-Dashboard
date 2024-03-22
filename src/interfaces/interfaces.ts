@@ -15,3 +15,7 @@ export interface BottomCardComponentProp {
   change: string
   isUp: boolean
 }
+
+export interface TitleComponentProps {
+  clickHandle : () => void
+}

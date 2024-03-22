@@ -1,19 +1,38 @@
 .App {
-  max-width: 1440px;
-  margin: 0 100px;
+  height: 100vh;
+  padding: 0 100px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 
-.background-container {
+.background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 27vh;
-  z-index: -1; /* Set a lower z-index to place it behind other containers */
-  background-color: #f5f7ff; /* Set your desired background color */
-  /* Add any other styles you want for the background container */
+  height: 100%;
+}
+
+.background-quarter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+}
+
+.background-behind {
+  z-index: 1; /* Behind everything */
+}
+
+.background-on-top {
+  z-index: 2; /* On top but beneath the content */
+}
+
+.app-content {
+  position: relative; /* Ensure z-index works correctly */
+  z-index: 3; /* On top of background-on-top */
+  padding: 20px;
 }

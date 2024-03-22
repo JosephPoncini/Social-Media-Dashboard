@@ -32,13 +32,13 @@ const BottomCardComponent = (props:BottomCardComponentProp) => {
 
 
   return (
-    <div className='w-60 rounded-6 text-center bg-LightGrayishBlueCardBG rounded-md'>
+    <div className='w-60 rounded-6 text-center bg-LightGrayishBlueCardBG dark:bg-DarkDesaturatedBlueCardBG rounded-md'>
       <div className='flex items-center justify-between mx-6 mt-5 mb-3'>
-        <h4 className=' text-sm text-DarkGrayishBlueText font-InterBold'>{props.name}</h4>
+        <h4 className=' text-sm text-DarkGrayishBlueText dark:text-DesaturatedBlueText font-InterBold '>{props.name}</h4>
         <img src={image} alt="social media icon" />
       </div>
       <div className='flex items-center justify-between mx-6 mb-5 mt-3'>
-        <h5 className='text-3xl font-InterBold text-VeryDarkBlueText '>{props.number}</h5>
+        <h5 className='text-3xl font-InterBold text-VeryDarkBlueText dark:text-WhiteText '>{props.number}</h5>
         <h6 className={changeClassName}>
         {
             props.isUp ? <i className="fas fa-caret-up"></i> : <i className="fas fa-caret-down"></i>
