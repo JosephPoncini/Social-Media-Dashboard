@@ -17,5 +17,10 @@ export interface BottomCardComponentProp {
 }
 
 export interface TitleComponentProps {
-  clickHandle : () => void
+  clickhandle : () => void
+}
+
+export interface SwitchComponentProps {
+  clickhandle : () => void
+  isHover : boolean
 }

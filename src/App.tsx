@@ -32,17 +32,16 @@ function App() {
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
-    console.log(theme);
   }
 
   return (
-    <div className="App">
+    <div className="App lg:px-[100px]">
 
-      <div className="background background-behind bg-WhiteBG dark:bg-VeryDarkBlueBG"></div>
-      <div className="background-quarter background-on-top bg-VeryPaleBlueTopBGPattern dark:bg-VeryDarkBlueTopBGPattern"></div>
-      <div className='app-content'>
-        <TitleComponent clickHandle={handleThemeSwitch} />
-        <div className='flex justify-between w-full '>
+      <div className="w-full  h-[2225px] lg:h-full background background-behind bg-WhiteBG dark:bg-VeryDarkBlueBG"></div>
+      <div className="w-full h-[260px] background-quarter background-on-top bg-VeryPaleBlueTopBGPattern dark:bg-VeryDarkBlueTopBGPattern"></div>
+      <div className='app-content p-5'>
+        <TitleComponent clickhandle={handleThemeSwitch} />
+        <div className='flex flex-col lg:flex-row items-center justify-between w-full '>
           {
             TopCards.map((card, idx) => {
               return (
@@ -60,7 +59,7 @@ function App() {
           }
         </div >
         <SubTitleComponent />
-        <div className='flex justify-between w-full mb-10'>
+        <div className='flex flex-col lg:flex-row items-center justify-between w-full lg:mb-10'>
           {
             BotCards.map((card, idx) => {
               if (idx < 4) {
@@ -81,7 +80,7 @@ function App() {
             })
           }
         </div>
-        <div className='flex justify-between w-full '>
+        <div className='flex flex-col lg:flex-row items-center justify-between w-full '>
           {
             BotCards.map((card, idx) => {
               if (idx > 3) {

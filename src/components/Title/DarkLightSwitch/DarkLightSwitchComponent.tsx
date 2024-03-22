@@ -2,9 +2,14 @@ import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
-import { TitleComponentProps } from '../../../interfaces/interfaces';
+import { SwitchComponentProps, TitleComponentProps } from '../../../interfaces/interfaces';
 
-const AntSwitch = styled(Switch)(({ theme }) => ({
+interface AntSwitchProps extends SwitchComponentProps {
+  isHover: boolean;
+}
+
+const AntSwitch = styled(Switch, { shouldForwardProp: (prop) => prop !== 'isHover' })<AntSwitchProps>(
+  ({ theme, isHover }) => ({
   width: 60,
   height: 30,
   padding: 0,
@@ -26,7 +31,7 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
       },
       '& + .MuiSwitch-track': {
         opacity: 1,
-        backgroundImage: 'linear-gradient(to right, #3eda82, #378fe6)',
+        backgroundImage: theme.palette.mode === 'dark' ? 'linear-gradient(to right, #3eda82, #378fe6)': 'linear-gradient(to right, #3eda82, #378fe6)',
       },
     },
   },
@@ -42,20 +47,20 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
   '& .MuiSwitch-track': {
     borderRadius: 30 / 2,
     opacity: 1,
-    backgroundImage: 'linear-gradient(to right, #3eda82, #378fe6)',
+    backgroundImage: (theme.palette.mode === 'dark' || isHover) ? 'linear-gradient(to right, #3eda82, #378fe6)': 'linear-gradient(to right, #AEB2CB, #AEB2CB)',
     boxSizing: 'border-box',
   },
 }));
 
-export default function DarkLightSwitchComponent(props: TitleComponentProps) {
+export default function DarkLightSwitchComponent(props: SwitchComponentProps) {
   const theme = useTheme();
 
   const handleThemeChange = () => {
     const newPaletteMode = theme.palette.mode === 'dark' ? 'light' : 'dark';
-    props.clickHandle();
+    props.clickhandle();
   };
 
   return (
-      <AntSwitch onChange={handleThemeChange} defaultChecked={theme.palette.mode === 'dark'} inputProps={{ 'aria-label': 'ant design' }} />
+      <AntSwitch clickhandle={()=>{}} onChange={handleThemeChange} defaultChecked={theme.palette.mode === 'dark'} inputProps={{ 'aria-label': 'ant design' }} isHover={props.isHover} />
   );
 }

@@ -17,7 +17,7 @@ const TopCardComponent = (props: TopCardComponentProps) => {
   }
 
   let image = "";
-  let SectionClassName = "font-InterRegular flex flex-col w-60 rounded-md text-center bg-LightGrayishBlueCardBG dark:bg-DarkDesaturatedBlueCardBG ";
+  let SectionClassName = "font-InterRegular flex flex-col w-full lg:w-60 rounded-md text-center bg-LightGrayishBlueCardBG hover:bg-CardHover dark:bg-DarkDesaturatedBlueCardBG dark:hover:bg-DarkCardHover cursor-pointer mb-5 lg:mb-0 ";
 
    switch (props.socialMedia) {
     case "Twitter":
@@ -46,7 +46,7 @@ const TopCardComponent = (props: TopCardComponentProps) => {
         <h4 className="text-xs block mt-5 mb-5 font-InterBold text-DarkGrayishBlueText dark:text-DesaturatedBlueText">{props.username}</h4>
       </div>
       <div>
-        <h4 className="text-5xl mt-1 mb-1 font-InterBold tracking-tight dark:text-WhiteText">{props.number}</h4>
+        <h4 className="text-5xl mt-2 mb-2 font-InterBold tracking-tight dark:text-WhiteText">{props.number}</h4>
         <h5 className="text-xs uppercase text-DarkGrayishBlueText dark:text-DesaturatedBlueText tracking-[0.25em]">{props.followers}</h5>
         <h6 className={changeClassName}>
           {

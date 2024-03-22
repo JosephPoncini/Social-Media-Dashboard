@@ -21,6 +21,8 @@ module.exports = {
         DesaturatedBlueText: '#8b97c6',
         WhiteText: '#ffffff',
 
+        DarkCardHover: '#333A56',
+
         //Light Theme
         Toggle: '#aeb3cb',
         WhiteBG: '#ffffff',
@@ -28,6 +30,8 @@ module.exports = {
         LightGrayishBlueCardBG: '#f0f2fa',
         DarkGrayishBlueText: '#63687e',
         VeryDarkBlueText: '#1e202a',
+
+        CardHover: '#E1E3F0',
       },
       fontSize: {
         normal:'14px',
