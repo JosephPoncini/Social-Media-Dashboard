@@ -7,80 +7,13 @@
   justify-content: center;
 }
 
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 65px;
-  height: 31px;
-  color: white;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
+.background-container {
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(to right, hsl(210, 78%, 56%),  hsl(146, 68%, 55%));
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 23px;
-  width: 23px;
-  left: 4px;
-  bottom: 4px;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-/* Add styles for light mode */
-.lightbg .slider:before {
-  background-color: white; /* Change this to the color you want for the circle in light mode */
-}
-
-/* Add styles for dark mode */
-.darkbg .slider:before {
-  background-color: black; /* Change this to the color you want for the circle in dark mode */
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(31px);
-  -ms-transform: translateX(31px);
-  transform: translateX(31px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+  width: 100%;
+  height: 27vh;
+  z-index: -1; /* Set a lower z-index to place it behind other containers */
+  background-color: #f5f7ff; /* Set your desired background color */
+  /* Add any other styles you want for the background container */
 }

@@ -22,6 +22,7 @@ function App() {
 
   return (
     <div className="App dark:bg-VeryDarkBlueBG ">
+      <div className="background-container"></div>
       <TitleComponent />
       <div className='flex justify-between w-full '>
         {

@@ -1,4 +1,5 @@
 import React from 'react'
+import DarkLightSwitchComponent from './DarkLightSwitch/DarkLightSwitchComponent'
 
 const TitleComponent = () => {
   return (
@@ -7,10 +8,11 @@ const TitleComponent = () => {
         <h1 className='font-InterBold text-[2em] text-VeryDarkBlueText'>Social Media Dashboard</h1>
         <h4 className='font-InterBold text-DarkGrayishBlueText'>Total Followers: 23,004</h4>
       </div>
-      <label className="switch">
+      {/* <label className="switch">
         <input type="checkbox" />
         <span className="slider round"></span>
-      </label>
+      </label> */}
+      <DarkLightSwitchComponent/>
     </div>
   )
 }
