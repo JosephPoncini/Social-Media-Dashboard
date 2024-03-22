@@ -16,7 +16,7 @@ const TitleComponent = (props:TitleComponentProps) => {
 
   return (
     <div className='flex flex-col lg:flex-row justify-between my-10'>
-      <div className='flex flex-col items-start border-[#9A9EAD] dark:border-[#373A4D]  border-b dark:border-b-2 lg:border-0 pb-4 mb-4 lg:pb-0 lg:mb-0'>
+      <div className='flex flex-col items-start border-[#9A9EAD] dark:border-[#373A4D]  border-b dark:border-b-2 lg:border-b-0 dark:lg:border-b-0 pb-4 mb-4 lg:pb-0 lg:mb-0'>
         <h1 className='font-InterBold text-2xl lg:text-[2em] text-VeryDarkBlueText dark:text-WhiteText'>Social Media Dashboard</h1>
         <h4 className='font-InterBold text-sm lg:text-normal text-DarkGrayishBlueText dark:text-DesaturatedBlueText'>Total Followers: 23,004</h4>
       </div>
